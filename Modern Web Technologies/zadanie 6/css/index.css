@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html {
+    font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    height: 100%;
+    transition: none;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding: 20rem 0 2rem 0;
+    position: relative;
+    min-height: 100%;
+    transition: none;
+}
+
+header {
+    display: block;
+    width: 60rem;
+    max-width: 60rem;
+    min-height: 5rem;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    color: #fff;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.highlight {
+    background: rgba(186, 145, 0, 0.87)
+}
+
+main {
+    display: block;
+    width: 60rem;
+    max-width: 60rem;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+main h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 1.2rem 0;
+}
+
+main p {
+    font-weight: normal;
+    margin: 1rem 0;
+}
+
+/* background */
+
+#background {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, #001f29 0%, #00384b 30rem, rgb(1, 163, 218));
+    overflow: hidden;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+#triangle1 {
+    filter: blur(15px);
+    border-top: 25rem solid rgba(214,  0, 34,1);
+    border-left: 15rem solid transparent;
+    border-right: 20rem solid transparent;
+    position: absolute;
+    animation: triangle1 240s infinite linear;
+    left: 50%;
+    top: 10rem;
+    z-index: 2;
+}
+
+@keyframes triangle1 {
+    0% {
+        transform: translate(-45rem) rotate3d(0, 0.1, 0.5, 30deg);
+    }
+    50% {
+        transform: translate(-55rem, -10rem) rotate3d(0, 0.1, 0.5, 210deg);
+    }
+    100% {
+        transform: translate(-45rem) rotate3d(0, 0.1, 0.5, 390deg);
+    }
+}
+
+#triangle2 {
+    filter: blur(5px);
+    border-top: 50rem solid rgba(255,205, 25,1);
+    border-left: 5rem solid transparent;
+    border-right: 25rem solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 10rem;
+    animation: triangle2 180s infinite linear;
+    z-index: 2;
+}
+
+@keyframes triangle2 {
+    0% {
+        transform: translate(25rem) rotate3d(0, 0.1, 0.5, 390deg);
+    }
+    50% {
+        transform: translate(-5rem, -50rem) rotate3d(0, 0.1, 0.5, 210deg);
+    }
+    100% {
+        transform: translate(25rem) rotate3d(0, 0.1, 0.5, 30deg);
+    }
+}
+
+/* stars */
+.star {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    z-index: 1;
+}
+
+#star001 {
+    left: 76%;
+    top: 7.28rem;
+}
+#star002 {
+    left: 95%;
+    top: 2.39rem;
+}
+#star003 {
+    left: 4%;
+    top: 7.86rem;
+}
+#star004 {
+    left: 15%;
+    top: 7.10rem;
+}
+#star005 {
+    left: 27%;
+    top: 16.31rem;
+}
+#star006 {
+    left: 68%;
+    top: 16.95rem;
+}
+#star007 {
+    left: 53%;
+    top: 12.49rem;
+}
+#star008 {
+    left: 5%;
+    top: 15.4rem;
+}
+#star009 {
+    left: 75%;
+    top: 8.57rem;
+}
+#star010 {
+    left: 57.12%;
+    top: 7.56rem;
+}
+#star011 {
+    left: 36.74%;
+    top: 2.56rem;
+}
+#star012 {
+    left: 38.74%;
+    top: 5.56rem;
+}
+#star013 {
+    left: 86.74%;
+    top: 24.56rem;
+}
+#star014 {
+    left: 17.74%;
+    top: 26.56rem;
+}
+
+.star-animation-01-01 {
+    animation: star-animation-1 1000ms infinite linear alternate;  
+}
+.star-animation-01-02 {
+    animation: star-animation-1 1020ms infinite linear alternate-reverse;  
+}
+.star-animation-01-03 {
+    animation: star-animation-1 980ms infinite linear alternate-reverse;  
+}
+.star-animation-01-04 {
+    animation: star-animation-1 1050ms infinite linear alternate;  
+}
+.star-animation-01-05 {
+    animation: star-animation-1 950ms infinite linear alternate;  
+}
+@keyframes star-animation-1 {
+    0% { /* low */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.1);
+    }
+    40% { /* high */
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+    }
+    50% { /* middle */
+        background: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+    }
+    55% { /* high */
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+    }
+    65% { /* low */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.1);
+    }
+    70% { /* high */
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+    }
+    80% { /* high */
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+    }
+    100% { /* low */
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* moon */
+#moon {
+    width: 15rem;
+    height: 15rem;
+    margin-left: 7.5rem;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side at 7rem 12rem, rgba(227, 195, 156, 1), rgb(180, 155, 125));
+    position: absolute;
+    z-index: 2;
+    transform: translate3d(-110%, 0, 0.1px);
+    filter: blur(0.65px);
+    box-shadow: 0 0 40px 1px rgba(227, 195, 156, 0.5);
+    animation: moon 300s infinite linear;
+}
+@keyframes moon {
+    0% {
+        top: 15rem;
+        left: 115%;
+    }
+    40% {
+        top: 1.5rem;
+        left: 63%;
+    }
+    50% {
+        top: 1rem;
+        left: 50%;
+    }
+    60% {
+        top: 1.5rem;
+        left: 37%;
+    }
+    100% {
+        top: 15rem;
+        left: -15%
+    }
+}
+
+#moon .crater {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+}
+#moon-crater-1 {
+    width: 6.1rem;
+    height: 6.1rem;
+    left: 1.2rem;
+    top: 3.1rem;
+    background: rgb(163, 128, 98);
+    box-shadow: 0 -4px 8px 2px rgba(0, 0, 0, 0.4) inset;
+}
+#moon-crater-2 {
+    width: 2.9rem;
+    height: 2.9rem;
+    left: 7.6rem;
+    top: 4.1rem;
+    background: rgb(153, 119, 92);
+    box-shadow: 0 -4px 8px 1px rgba(0, 0, 0, 0.3) inset;
+}
+#moon-crater-3 {
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 9.1rem;
+    top: 6.7rem;
+    background: rgb(146, 114, 87);
+    box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, 0.2) inset;
+}
+#moon-crater-4 {
+    width: 1.7rem;
+    height: 1.7rem;
+    left: 12.3rem;
+    top: 5.1rem;
+    background: rgb(146, 114, 87);
+    box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, 0.2) inset;
+}
+#moon-crater-5 {
+    width: 1.75rem;
+    height: 1.75rem;
+    left: 12.0rem;
+    top: 7.5rem;
+    background: rgb(146, 114, 87);
+    box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, 0.2) inset;
+}
+#moon-crater-6 {
+    width: 1rem;
+    height: 1rem;
+    left: 11.0rem;
+    top: 9.54rem;
+    background: rgb(146, 114, 87);
+    box-shadow: 0 -4px 5px 0 rgba(0, 0, 0, 0.2) inset;
+}
